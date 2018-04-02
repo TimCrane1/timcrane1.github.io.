@@ -418,7 +418,7 @@ header.masthead .intro-text .intro-heading {
   header.masthead .intro-text .intro-lead-in {
     width: 85%;
     text-align: left;
-    /*padding: 15%;*/
+    padding: 15%;
     padding-left: 0;
     margin-top: 5%;
     color: black;
