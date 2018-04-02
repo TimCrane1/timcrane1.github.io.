@@ -398,12 +398,6 @@ header.masthead .intro-text .intro-lead-in {
 
 @media (max-width: 570px) {
   header.masthead .intro-text .intro-lead-in {
-  font-size: 2em;
-}
-}
-
-@media (max-width: 450px) {
-  header.masthead .intro-text .intro-lead-in {
   font-size: 1.5em;
   margin-top: 30%;
 }
