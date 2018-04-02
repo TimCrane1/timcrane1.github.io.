@@ -461,6 +461,12 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
+@media (min-width: 1400px) {
+  header.masthead .intro-text .intro-lead-in {
+    padding: 15%;
+  }
+}
+
 #portfolio .portfolio-item {
   right: 0;
   margin: 0 0 15px;
