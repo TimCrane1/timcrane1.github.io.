@@ -507,7 +507,8 @@ header.masthead .intro-text .intro-heading {
 @media (min-width: 1920px) {
   header.masthead .intro-text .intro-lead-in {
       font-size: 3em;
-      margin-top: 20%;
+      margin: auto;
+      text-align: center;
     }
   }
 
