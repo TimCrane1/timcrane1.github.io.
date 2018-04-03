@@ -31,6 +31,107 @@
     }
 }
 
+@keyframes fadeout {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@-moz-keyframes fadeout { /* Firefox */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+@keyframes mymove {
+    from {height: 100%;}
+    to {height: 28%;}
+}
+
+@-webkit-@keyframes mymove {
+    from {height: 100%;}
+    to {height: 28%;}
+}
+
+@media (max-width: 990px) {
+  @keyframes mymove {
+    from {height: 100%;}
+    to {height: 40%;}
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -25%; 
+  }
+
+  to {
+    margin-left: 3%;
+  }
+}
+
+@keyframes slideinTwo {
+  from {
+    margin-left: -175%; 
+  }
+
+  to {
+    margin-left: auto;
+  }
+}
+
+@-webkit-@keyframes slidein {
+  from {
+    margin-left: -25%; 
+  }
+
+  to {
+    margin-left: 3%;
+  }
+}
+
+@keyframes slideright {
+  from {
+    margin-right: -25%; 
+  }
+
+  to {
+    margin-right: 5%;
+  }
+}
+
+@keyframes sliderightTwo {
+  from {
+    margin-right: -175%; 
+  }
+
+  to {
+    margin-right: auto;
+  }
+}
+
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -67,8 +168,9 @@
 }
 
 body, html {
+  height: 100%;
   overflow-x: hidden;
-  font-family: 'Questrial', "Trebuchet MS", 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Questrial', "Trebuchet MS", 'Fjalla One', 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-animation: fadein 3s ease-out;
   animation: fadeInUp 4s ease-out;  
 }
@@ -120,7 +222,7 @@ section h3.section-subheading {
 
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    /*padding: 150px 0;*/
   }
 }
 
@@ -169,6 +271,8 @@ img::-moz-selection {
 
 #mainNav {
   background-color: #212529;
+  position: relative;
+  margin-bottom: -5%;
 }
 
 #mainNav .navbar-toggler {
@@ -206,13 +310,14 @@ img::-moz-selection {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 25px;
+    /*padding-top: 25px;*/
     padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
+    position: relative;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
@@ -778,7 +883,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 #logoo {
-  padding-top: 5%;
+  padding-top: -2%;
   margin-bottom: -7%;
 }
 
@@ -831,4 +936,91 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     text-align: center;
   }
 
+  #corner {
+  background-image: url("../img/portfolio/corner.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#skyloft {
+  background-image: url("../img/portfolio/skyloft.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#buds {
+  background-image: url("../img/portfolio/buds.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#hilltop {
+  background-image: url("../img/portfolio/hilltop.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#corporate_headquarters {
+  background-image: url("../img/portfolio/hq.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  .project_title {
+  margin-left: 3%;
+  color: black;
+  padding-top: 2%;
+  font-size: 2.5em;
+  font-family: 'Fjalla One';
+}
+
+.project_title2 {
+  text-align: right;
+  margin-right: 5%;
+  color: black;
+  padding-top: 2%;
+  font-size: 2.5em;
+  font-family: 'Fjalla One';
+}
+
+.project_title2:hover {
+  color: #fec503;
+  text-decoration:none;
+}
+
+#cor, #bud, #chq {
+  margin-left: -45%;
+  animation-fill-mode: forwards;
+} 
+
+#sky, #hill {
+  margin-right: -45%;
+  animation-fill-mode: forwards;
+}
+
+.slideLeft {
+  animation: slidein 1s ease-out;
+}
+
+.slideRight {
+  animation: slideright 1s ease-out;
+}
+
+#work_title {
+    height: 0;
+    text-align: center;
+    margin: auto;
+    padding-top: 7%;
+    padding-bottom: 1%;
+}
 

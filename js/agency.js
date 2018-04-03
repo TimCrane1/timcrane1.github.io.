@@ -1,20 +1,29 @@
 (function($) {
   "use strict"; // Start of use strict
   $("#texty").addClass("scrolling");
-  console.log('holler');
-  // $("body").scroll(function() {
-  //   console.log('holler2');
-  //   if($('#').isInViewport()){
-  //     // corner = true;
-  //     $('#portfolio').addClass('fade');
-  //   } else if($('#about').isInViewport()){
-  //     // corner = true;
-  //     $('#about').addClass('fade');
-  //   } else if($('#team').isInViewport()){
-  //     // corner = true;
-  //     $('#team').addClass('fade');
-  //   } 
-  // });
+  $("body").scroll(function() {
+
+    if($('#cor').isInViewport()){
+      // corner = true;
+      $('#cor').addClass('slideLeft');
+    } else if($('#sky').isInViewport()){
+      // corner = true;
+      $('#sky').addClass('slideRight');
+    } else if($('#bud').isInViewport()){
+      // corner = true;
+      $('#bud').addClass('slideLeft');
+    } else if($('#hill').isInViewport()){
+      // corner = true;
+      $('#hill').addClass('slideRight');
+    } else if($('#chq').isInViewport()){
+      // corner = true;
+      $('#chq').addClass('slideLeft');
+    } else if($('#portfolio').isInViewport()){
+      // corner = true;
+      $('#portfolio').addClass('fade');
+    }
+  
+  });
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -62,12 +71,17 @@
     $(".navbar").removeClass("d-none");
   })
 
-  // $.fn.isInViewport = function() {
-  //   var elementTop = $(this).offset().top;
-  //   var elementBottom = elementTop + $(this).outerHeight();
-  //   var viewportTop = $(window).scrollTop();
-  //   var viewportBottom = viewportTop + $(window).height();
-  //   return elementBottom > viewportTop && elementTop < viewportBottom;
-  // };
+  $.fn.isInViewport = function() {
+    var tony = $(this);
+    console.log(tony);
+    if(tony.offset() !== undefined){
+      var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+    
+  };
 
 })(jQuery); // End of use strict

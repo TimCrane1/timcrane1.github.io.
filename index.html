@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Ubuntu" rel="stylesheet">
     <link rel='icon' href='img/favi.ico' type='image/x-icon'/ >
 
     <!-- Custom styles for this template -->
@@ -30,6 +31,10 @@
   <body id="page-top">
 
     <!-- Navigation -->
+    
+
+    <!-- Header -->
+    <header class="masthead">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Johnson &amp; Trube</a>
@@ -43,7 +48,7 @@
               <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Work</a>
+              <a class="nav-link js-scroll-trigger" href="#work">Work</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">Thoughts</a>
@@ -58,9 +63,6 @@
         </div>
       </div>
     </nav>
-
-    <!-- Header -->
-    <header class="masthead">
       <div class="container">
       <div id="logoo">
       <?xml version="1.0" encoding="utf-8"?>
@@ -391,13 +393,42 @@
     </header>
 
     <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
+    <div id="work">
+      <!-- <h1 id="work_title">Work</h1> -->
+    </div>
+      <section id="corner" >
+      <div>
+        <a data-toggle="modal" href="#portfolioModal1" class="project_title" id="cor">The Corner</a>
+      </div>  
+    </section>
+    <section id="skyloft">
+      <div>
+        <a data-toggle="modal" href="#portfolioModal2"><h1 class="project_title2" id="sky">Skyloft</h1></a> 
+      </div>  
+    </section>
+    <section id="buds">
+      <div>
+        <a data-toggle="modal" href="#portfolioModal3" class="project_title" id="bud">Bud's</a>  
+      </div>  
+    </section>
+    <section id="hilltop">
+      <div>
+        <h1 data-toggle="modal" href="#portfolioModal4" class="project_title2" id="hill">The Hilltop</h1>  
+      </div>  
+    </section>
+    <section id="corporate_headquarters">
+      <div>
+        <h1 data-toggle="modal" href="#portfolioModal5" class="project_title" id="chq">Corporate HQ</h1>  
+      </div>  
+    </section>
+
+    <!-- <section class="bg-light" id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Work</h2>
+            <h2 class="section-heading text-uppercase">Work</h2> -->
             <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
-          </div>
+          <!-- </div>
         </div>
         <div class="row">
           <div class="col-lg-12">
@@ -408,11 +439,11 @@
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/corner.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>The Corner</h4>
+              <div class="portfolio-caption">
+              <h4>The Corner</h4> -->
               <!-- <p class="text-muted">Illustration</p> -->
-            </div>
+            <!-- </div>
+            </a>
           </div>
           <div class="col-lg-12">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
@@ -424,11 +455,11 @@
               <img class="img-fluid" src="img/portfolio/skyloft.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Skyloft</h4>
+              <h4>Skyloft</h4> -->
               <!-- <p class="text-muted">Graphic Design</p> -->
-            </div>
+            <!-- </div>
           </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
+          <div class="col-lg-12">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -438,25 +469,26 @@
               <img class="img-fluid" src="img/portfolio/buds.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Bud's</h4>
+              <h4>Bud's</h4> -->
               <!-- <p class="text-muted">Identity</p> -->
-            </div>
+            <!-- </div>
           </div>
-          <div class="col-md-6 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+          <div class="col-lg-12">
+            
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/hilltop.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Hilltop</h4>
+              <a class="project_title2" data-toggle="modal" href="#portfolioModal4">Hilltop</a>
+              <img class="img-fluid" src="img/portfolio/hilltop.jpg" alt=""> -->
+            
+            <!-- <div class="portfolio-caption">
+              <h4>Hilltop</h4> -->
               <!-- <p class="text-muted">Branding</p> -->
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6 portfolio-item">
+            <!-- </div> -->
+          <!-- </div>
+          <div class="col-lg-12">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -466,13 +498,13 @@
               <img class="img-fluid" src="img/portfolio/hq.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Corporate HQ</h4>
+              <h4>Corporate HQ</h4> -->
               <!-- <p class="text-muted">Website Design</p> -->
-            </div>
+            <!-- </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- About -->
     <section id="about">
