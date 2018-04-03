@@ -2,19 +2,19 @@
   "use strict"; // Start of use strict
   $("#texty").addClass("scrolling");
   console.log('holler');
-  $("body").scroll(function() {
-    console.log('holler2');
-    if($('#portfolio').isInViewport()){
-      // corner = true;
-      $('#portfolio').addClass('fade');
-    } else if($('#about').isInViewport()){
-      // corner = true;
-      $('#about').addClass('fade');
-    } else if($('#team').isInViewport()){
-      // corner = true;
-      $('#team').addClass('fade');
-    } 
-  });
+  // $("body").scroll(function() {
+  //   console.log('holler2');
+  //   if($('#').isInViewport()){
+  //     // corner = true;
+  //     $('#portfolio').addClass('fade');
+  //   } else if($('#about').isInViewport()){
+  //     // corner = true;
+  //     $('#about').addClass('fade');
+  //   } else if($('#team').isInViewport()){
+  //     // corner = true;
+  //     $('#team').addClass('fade');
+  //   } 
+  // });
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -62,12 +62,12 @@
     $(".navbar").removeClass("d-none");
   })
 
-  $.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-  };
+  // $.fn.isInViewport = function() {
+  //   var elementTop = $(this).offset().top;
+  //   var elementBottom = elementTop + $(this).outerHeight();
+  //   var viewportTop = $(window).scrollTop();
+  //   var viewportBottom = viewportTop + $(window).height();
+  //   return elementBottom > viewportTop && elementTop < viewportBottom;
+  // };
 
 })(jQuery); // End of use strict
