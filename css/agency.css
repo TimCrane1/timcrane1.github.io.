@@ -145,8 +145,10 @@ body, html {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Questrial', 'Fjalla One', 'Ubuntu','Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-animation: fadein 2s ease-out;
-  animation: fadein 2s ease-out;
+  -webkit-animation: fadein 4s ease-out;
+  animation: fadein 4s ease-out;
+  background-image: url(../img/gradient1.jpg);
+  /*background-position: top;*/
 }
 
 
@@ -157,7 +159,7 @@ hr {
 }
 
 p {
-  font-family: 'Oswald';
+  font-family: 'Questrial','Roboto Slab','Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.75;
 }
 
@@ -171,6 +173,7 @@ a:hover {
 }
 
 i {
+  font-family: 'Questrial','Roboto Slab','Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -425,8 +428,8 @@ header.masthead .intro-text .intro-heading {
     line-height: 1.5em;
     margin-bottom: 25px;
     font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    -webkit-animation: fadein 4s ease-out;
-   animation: fadein 4s ease-out;
+    -webkit-animation: fadein 5s ease-out;
+   animation: fadein 5s ease-out;
   }
   header.masthead .intro-text .intro-heading {
     font-size: 75px;
@@ -455,6 +458,7 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 767px) {
   #portfolio {
+    margin-top: 3%;
     height: 200%;
     opacity: 0;
   }
