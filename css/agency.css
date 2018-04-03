@@ -151,6 +151,13 @@ body, html {
   /*background-position: top;*/
 }
 
+@media (max-width: 990px) {
+  body, html {
+    -webkit-animation: none;
+  animation: none;
+  }
+}
+
 
 
 hr {
@@ -287,6 +294,14 @@ img::-moz-selection {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@media (max-width: 498px) {
+  #mainNav .navbar-toggler {
+    font-size: 1em;
+  }
+}
+
+
+
 #mainNav .navbar-brand {
   color: black;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
@@ -303,6 +318,12 @@ img::-moz-selection {
   letter-spacing: 1px;
   color: black;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 498px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: .8em;
+  }
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -368,6 +389,13 @@ header.masthead {
   -webkit-animation: mymove 5s ease-out;
 }
 
+@media (max-width: 990px) {
+  header.masthead {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
 /*@media (max-width: 990px) {
   header.masthead {
     height: 40%;
@@ -401,7 +429,15 @@ header.masthead .intro-text .intro-lead-in {
 
 @media (max-width: 768px) {
   header.masthead .intro-text .intro-lead-in {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header.masthead .intro-text .intro-lead-in {
     width: 70%;
+    padding-top: 8%;
   font-size: 2.1em;
 }
 }
@@ -418,9 +454,10 @@ header.masthead .intro-text .intro-lead-in {
 }
 }
 
-@media (max-width: 323px) {
+@media (max-width: 397px) {
   header.masthead .intro-text .intro-lead-in {
-  font-size: 1em;
+    font-size: 1em;
+    padding-top: 5%;
 }
 }
 
@@ -442,7 +479,7 @@ header.masthead .intro-text .intro-heading {
     text-align: left;
     /*padding: 15%;*/
     padding-left: 0;
-    margin-top: -7%;
+    margin-top: -2%;
     color: black;
     font-size: 3em;
     line-height: 1.5em;
@@ -1140,9 +1177,21 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   animation-fill-mode: forwards;
 }
 
+@media (max-width: 990px) {
+  .fade {
+  animation: none;
+  }
+}
+
 .scrolling {
   animation: turn 6s;
   }
+
+@media (max-width: 990px) {
+  .scrolling {
+  animation: none;
+  }
+}
 
 .blocks {
   text-align: -webkit-center;
@@ -1164,6 +1213,21 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .slideRight {
   animation: slideright 1s ease-out;
+}
+
+@media (max-width: 990px) {
+  .slideLeft {
+  animation: none;
+  }
+  .slideRight {
+  animation: none;
+  }
+  #cor, #bud, #chq {
+  margin-left: 3%;
+  } 
+  #sky, #hill {
+  margin-right: 5%;
+  }
 }
 
 /*.slideLeft2 {
