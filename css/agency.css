@@ -366,7 +366,7 @@ img::-moz-selection {
 
 @media (min-width: 1190px) {
   #mainNav {
-    padding-right: 23%;
+    padding-right: 5%;
   }
 }
 
@@ -506,10 +506,9 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 1920px) {
   header.masthead .intro-text .intro-lead-in {
-      font-size: 3em;
-      margin: auto;
-      text-align: center;
-      margin-top: 50%;
+    font-size: 4em;
+    padding-top: 15%;
+    text-align: center;
     }
   }
 
