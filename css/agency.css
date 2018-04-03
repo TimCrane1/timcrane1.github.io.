@@ -442,7 +442,7 @@ header.masthead .intro-text .intro-lead-in {
 }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 749px) {
   header.masthead .intro-text .intro-lead-in {
   font-size: 1.5em;
 }
@@ -496,6 +496,20 @@ header.masthead .intro-text .intro-heading {
     font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
+
+@media (max-width: 990px) {
+  header.masthead .intro-text .intro-lead-in {
+      -webkit-animation: none;
+      animation: none;
+    }
+  }
+
+@media (min-width: 1920px) {
+  header.masthead .intro-text .intro-lead-in {
+      font-size: 3em;
+      margin-top: 20%;
+    }
+  }
 
 @media (min-width: 992px) {
   header.masthead .intro-text .intro-lead-in {
@@ -1177,11 +1191,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   animation-fill-mode: forwards;
 }
 
-@media (max-width: 990px) {
-  .fade {
-  animation: none;
-  }
-}
 
 .scrolling {
   animation: turn 6s;
@@ -1329,6 +1338,15 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .pads {
   padding-top: 2%;
+}
+
+@media (max-width: 990px) {
+  .fade {
+  animation: none;
+  }
+  #portfolio {
+    opacity: 1;
+  }
 }
 
 
