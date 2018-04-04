@@ -1,5 +1,7 @@
 :root {
   --yellow: #fed136;
+  --blue: #355681;
+  --black: #3a3a3a;
 }
 
 @keyframes fadein {
@@ -197,6 +199,7 @@ html {
   /*-webkit-animation-fill-mode: both;
   animation-fill-mode: both;*/
   /*background-position: top;*/
+  color: var(--blue);
 }
 
 @media (max-width: 990px) {
@@ -208,7 +211,7 @@ html {
 }
 
 hr {
-  color: black;
+  color: --var(--blue));
   size: 4px;
 }
 
@@ -219,11 +222,11 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: var(--yellow);
 }
 
 a:hover {
-  color: #fec503;
+  color: var(--yellow);
   text-decoration: none;
 }
 
@@ -235,11 +238,11 @@ i {
 }
 
 input {
-  color: black;
+  color: var(--blue);
 }
 
 .text-primary {
-  color: #fed136 !important;
+  color: var(--yellow) !important;
 }
 
 h1,
@@ -258,7 +261,7 @@ h3 {
 }
 
 #about {
-  border-top: 2px solid #e9ecef;
+  border-top: 2px solid var(--blue);
   width: 80%;
   margin: 0 auto;
 }
@@ -271,6 +274,9 @@ section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
+  text-shadow: 2px 2px 2px var(--blue);
+  color: var( --yellow);
+
 }
 
 section h3.section-subheading {
@@ -294,7 +300,7 @@ section h3.section-subheading {
 
 .btn-primary {
   background-color: rgba(0, 0, 0, 0.5);
-  color: black;
+  color: var(--blue);
 }
 
 .btn-primary:active,
@@ -302,7 +308,7 @@ section h3.section-subheading {
 .btn-primary:hover {
   background-color: #fec810 !important;
   border-color: #fec810 !important;
-  color: black;
+  color: var(--black);
 }
 
 .btn-primary:active,
@@ -312,14 +318,14 @@ section h3.section-subheading {
 }
 
 ::-moz-selection {
-  background: #fed136;
+  background: var(-yellow);
   text-shadow: none;
 }
 
-::selection {
-  background: #fed136;
+/* ::selection {
+  background: var(--yellow);
   text-shadow: none;
-}
+} */
 
 img::-moz-selection {
   background: transparent;
@@ -353,7 +359,7 @@ img::-moz-selection {
   right: 0;
 
   text-transform: uppercase;
-  color: black;
+  color: var(--black);
   border: 0;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -365,7 +371,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
-  color: black;
+  color: var(--black);
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
@@ -373,15 +379,16 @@ img::-moz-selection {
 #mainNav .navbar-brand:active,
 #mainNav .navbar-brand:focus,
 #mainNav .navbar-brand:hover {
-  color: black;
+  color: var(--black);
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
   font-size: 1.1em;
   font-weight: 400;
-  padding: 5px 15px;
+  padding: 0 0 .5em 0;
+  color: var(--blue);
+  margin: 1em;
   letter-spacing: 1px;
-  color: black;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -389,11 +396,6 @@ img::-moz-selection {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.8em;
   }
-}
-
-#mainNav .navbar-nav .nav-item .nav-link.active,
-#mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: blue;
 }
 
 @media (min-width: 992px) {
@@ -410,9 +412,25 @@ img::-moz-selection {
     transition: all 0.3s;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    padding: 2.1em 1em !important;
-    color: black;
+    padding: 0 0 .5em 0;
+    color: var(--blue);
+    margin: 1em;
+    /* border-bottom: 1px solid transparent; */
   }
+  .nav-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--blue);
+    transition: width .3s;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+
+  }
+
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
@@ -473,7 +491,7 @@ header.masthead {
 
 .intro-text .intro-lead-in {
   text-align: left;
-  color: black;
+  color: var(--blue);
   font-size: 2.5em;
   line-height: 1.5em;
   margin: 25px;
@@ -525,7 +543,7 @@ header.masthead {
     /*padding: 15%;*/
     padding-left: 0;
     /*margin-top: -2%;*/
-    color: black;
+    color: var(--blue);
     font-size: 3em;
     line-height: 1.5em;
     margin-bottom: 25px;
@@ -778,7 +796,7 @@ header.masthead {
   width: 2px;
   margin-left: -1.5px;
   content: "";
-  background-color: #e9ecef;
+  background-color: var(--blue);
 }
 
 .timeline > li {
@@ -828,9 +846,9 @@ header.masthead {
   margin-left: 0;
   text-align: center;
   color: white;
-  border: 7px solid #e9ecef;
+  border: 7px solid var(--blue);
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: var(--blue);
 }
 
 .timeline > li .timeline-image h4 {
@@ -981,7 +999,7 @@ section#contact {
 }
 
 section#contact .section-heading {
-  color: black;
+  color: var(--var(--black));
 }
 
 section#contact .form-group {
@@ -1002,7 +1020,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-  border-color: #fed136;
+  border-color: var(--yellow);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -1082,7 +1100,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:active,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:hover {
-  background-color: #fed136;
+  background-color: var(--yellow);
 }
 
 /*Custom CSS*/
@@ -1128,23 +1146,26 @@ ul.social-buttons li a:hover {
 }
 
 .project_title {
-  color: black;
+  color: var(--yellow);
   padding-top: 25px;
   font-size: 2.5em;
   font-family: "Fjalla One";
+  text-shadow: 2px 2px 2px var(--blue);
 }
 
 .project_title2 {
   text-align: right;
-  color: black;
+  color: var(--yellow);
   padding-top: 25px;
   font-size: 2.5em;
   font-family: "Fjalla One";
+  text-shadow: 2px 2px 2px var(--blue);
 }
 
 .project_title:hover,
 .project_title2:hover {
-  color: #fec503;
+  color: var(--blue);
+
   text-decoration: none;
 }
 
@@ -1189,7 +1210,7 @@ ul.social-buttons li a:hover {
 }
 
 #logoy {
-  fill: blue;
+  fill: var(--blue);
 }
 
 @-webkit-keyframes turn {
@@ -1215,7 +1236,7 @@ ul.social-buttons li a:hover {
 }
 
 #texty {
-  fill: black;
+  fill: var(--blue);
   -webkit-transform-origin: 274px 269px;
   -ms-transform-origin: 274px 269px;
   transform-origin: 274px 269px;
@@ -1330,7 +1351,7 @@ ul.social-buttons li a:hover {
 
 #home_btn {
   font-size: 1em;
-  color: black;
+  color: var(--black);
   float: right;
   margin-right: 5%;
 }
@@ -1338,14 +1359,20 @@ ul.social-buttons li a:hover {
 @media (min-width: 767px) {
   #home_btn {
     font-size: 1.5em;
-    color: black;
+    color: var(--black);
     float: right;
     margin-right: 5%;
   }
 }
 
+#sendMessageButton {
+      border: 2px solid var(--yellow);
+      background-color: transparent;
+      color: var(--yellow);
+}
 #sendMessageButton:hover {
-  color: #fec503;
+  color: var(--blue);
+  background-color: var(--yellow);
   text-decoration: none;
 }
 
