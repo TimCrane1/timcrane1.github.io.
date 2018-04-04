@@ -1344,12 +1344,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
           animation: none;
   }
   #cor, #bud, #chq {
-  margin-left: -45%;
-  animation-fill-mode: forwards;
+  margin-left: 3%;
   } 
   #sky, #hill {
-  margin-right: -45%;
-  animation-fill-mode: forwards;
+  margin-right: 5%;
   }
 }
 
