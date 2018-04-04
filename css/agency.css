@@ -15,7 +15,7 @@
     }
 }
 
-@-webkit-keyframes fadeout {
+/*@-webkit-keyframes fadeout {
     from {
         opacity:1;
     }
@@ -31,16 +31,7 @@
     to {
         opacity:0;
     }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:1;
-    }
-    to {
-        opacity:0;
-    }
-}
-
+}*/
 
 @-webkit-keyframes mymove {
     from {height: 100%;}
@@ -174,9 +165,11 @@ body, html {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Questrial', 'Fjalla One', 'Ubuntu','Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  animation: fadein 4s ease-out;
-  -webkit-animation: fadein 4s ease-out;
+  animation: fadein 3s ease-out;
+  -webkit-animation: fadein 3s ease-out;
   background-image: url(../img/gradient1.jpg);
+  /*-webkit-animation-fill-mode: both;
+  animation-fill-mode: both;*/
   /*background-position: top;*/
 }
 
@@ -428,8 +421,8 @@ header.masthead {
   width: 100%;
   height: 28%;
   margin-bottom: 40%;
-  animation: mymove 5s ease-out;
-  -webkit-animation: mymove 5s ease-out;
+  animation: mymove 3s ease-out;
+  -webkit-animation: mymove 3s ease-out;
 }
 
 @media (max-width: 990px) {
@@ -474,8 +467,8 @@ header.masthead .intro-text .intro-lead-in {
   margin-bottom: 25px;
   margin-top:15%;
   font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-animation: fadein 4s ease-out;
-  animation: fadein 4s ease-out;
+  -webkit-animation: fadein 3s ease-out;
+  animation: fadein 3s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -545,7 +538,7 @@ header.masthead .intro-text .intro-heading {
     margin-bottom: 25px;
     font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-animation: fadein 5s ease-out;
-   animation: fadein 5s ease-out;
+   animation: fadein 3s ease-out;
   }
   header.masthead .intro-text .intro-heading {
     font-size: 75px;
@@ -1246,9 +1239,9 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 #texty {
   fill: black;
-  -webkit-transform-origin: 272px 272px;
-      -ms-transform-origin: 272px 272px;
-          transform-origin: 272px 272px;
+  -webkit-transform-origin: 274px 269px;
+      -ms-transform-origin: 274px 269px;
+          transform-origin: 274px 269px;
 }
 
 @media (max-width: 992px) {
@@ -1291,16 +1284,16 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .fade {
   opacity: 0;
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 
 .scrolling {
-  -webkit-animation: turn 6s;
-          animation: turn 6s;
+  -webkit-animation: turn 3s;
+          animation: turn 3s;
   }
 
 @media (max-width: 990px) {
