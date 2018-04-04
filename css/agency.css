@@ -366,11 +366,17 @@ img::-moz-selection {
 
 @media (max-width: 1198px) {
   #mainNav {
-    padding-right: 25%;
+    padding-right: 35%;
   }
 }
 
 @media (min-width: 1199px) {
+  #mainNav {
+    padding-right: 25%;
+  }
+}
+
+@media (min-width: 1440px) {
   #mainNav {
     padding-right: 15%;
   }
