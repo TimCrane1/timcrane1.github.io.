@@ -172,8 +172,8 @@ body, html {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Questrial', 'Fjalla One', 'Ubuntu','Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  animation: fadein 4s ease-out;
-  -webkit-animation: fadein 4s ease-out;
+  /*animation: fadein 4s ease-out;
+  -webkit-animation: fadein 4s ease-out;*/
   background-image: url(../img/gradient1.jpg);
   /*background-position: top;*/
 }
@@ -426,8 +426,8 @@ header.masthead {
   width: 100%;
   height: 28%;
   margin-bottom: 40%;
-  animation: mymove 5s ease-out;
-  -webkit-animation: mymove 5s ease-out;
+  /*animation: mymove 5s ease-out;
+  -webkit-animation: mymove 5s ease-out;*/
 }
 
 @media (max-width: 990px) {
@@ -472,8 +472,8 @@ header.masthead .intro-text .intro-lead-in {
   margin-bottom: 25px;
   margin-top:15%;
   font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-animation: fadein 4s ease-out;
-  animation: fadein 4s ease-out;
+  /*-webkit-animation: fadein 4s ease-out;
+  animation: fadein 4s ease-out;*/
 }
 
 @media (max-width: 768px) {
@@ -542,8 +542,8 @@ header.masthead .intro-text .intro-heading {
     line-height: 1.5em;
     margin-bottom: 25px;
     font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    -webkit-animation: fadein 5s ease-out;
-   animation: fadein 5s ease-out;
+    /*-webkit-animation: fadein 5s ease-out;
+   animation: fadein 5s ease-out;*/
   }
   header.masthead .intro-text .intro-heading {
     font-size: 75px;
@@ -602,14 +602,14 @@ header.masthead .intro-text .intro-heading {
   /*height: 400%;*/
   display: -ms-grid;
   display: grid;
-  opacity: 0;
+  opacity: 1;
 }
 
 @media (min-width: 767px) {
   #portfolio {
     margin-top: 3%;
     /*height: 200%;*/
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -1096,7 +1096,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 
 #corner {
-  background-image: url("../img/corner.jpg");
+  background-image: url("../img/gradient.jpg");
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
@@ -1104,7 +1104,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 #skyloft {
-  background-image: url("../img/skyloft.jpg");
+  background-image: url("../img/gradient.jpg");
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
@@ -1112,7 +1112,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 #buds {
-  background-image: url("../img/Buds.jpg");
+  background-image: url("../img/gradient.jpg");
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
@@ -1120,7 +1120,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 #hilltop {
-  background-image: url("../img/hilltop.jpg");
+  background-image: url("../img/gradient.jpg");
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
@@ -1128,7 +1128,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 #corporate_headquarters {
-  background-image: url("../img/hq.jpg");
+  background-image: url("../img/gradient.jpg");
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
@@ -1282,26 +1282,26 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 
-.fade {
+/*.fade {
   opacity: 0;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
+}*/
 
 
-.scrolling {
+/*.scrolling {
   -webkit-animation: turn 6s;
           animation: turn 6s;
-  }
+  }*/
 
-@media (max-width: 990px) {
+/*@media (max-width: 990px) {
   .scrolling {
   -webkit-animation: none;
           animation: none;
   }
-}
+}*/
 
 .blocks {
   text-align: -webkit-center;
@@ -1317,7 +1317,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   animation-fill-mode: forwards;*/
 }
 
-.slideLeft {
+/*.slideLeft {
   -webkit-animation: slidein 1s ease-out;
           animation: slidein 1s ease-out;
 }
@@ -1335,7 +1335,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   .slideRight {
   -webkit-animation: none;
           animation: none;
-  }
+  }*/
   #cor, #bud, #chq {
   margin-left: 3%;
   } 
