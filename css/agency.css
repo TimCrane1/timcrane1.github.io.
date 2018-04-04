@@ -364,9 +364,15 @@ img::-moz-selection {
   }
 }
 
-@media (min-width: 1190px) {
+@media (max-width: 1198px) {
   #mainNav {
-    padding-right: 5%;
+    padding-right: 25%;
+  }
+}
+
+@media (min-width: 1199px) {
+  #mainNav {
+    padding-right: 15%;
   }
 }
 
