@@ -545,6 +545,15 @@ header.masthead .intro-text .intro-heading {
     }
   }
 
+@media (max-width: 424px) {
+  header.masthead .intro-text .intro-lead-in {
+      margin-top: 31%;
+      font-size: 1.3em;
+    }
+    header.masthead {
+      margin-bottom: 100%;
+    }
+  }
 
 
 
