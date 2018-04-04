@@ -6,14 +6,6 @@
         opacity:1;
     }
 }
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
 @-webkit-keyframes fadein { /* Safari and Chrome */
     from {
         opacity:0;
@@ -22,12 +14,13 @@
         opacity:1;
     }
 }
-@-o-keyframes fadein { /* Opera */
+
+@-webkit-keyframes fadeout {
     from {
-        opacity:0;
+        opacity:1;
     }
     to {
-        opacity: 1;
+        opacity:0;
     }
 }
 
@@ -39,14 +32,6 @@
         opacity:0;
     }
 }
-@-moz-keyframes fadeout { /* Firefox */
-    from {
-        opacity:1;
-    }
-    to {
-        opacity:0;
-    }
-}
 @-webkit-keyframes fadein { /* Safari and Chrome */
     from {
         opacity:1;
@@ -55,13 +40,11 @@
         opacity:0;
     }
 }
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:1;
-    }
-    to {
-        opacity: 0;
-    }
+
+
+@-webkit-keyframes mymove {
+    from {height: 100%;}
+    to {height: 28%;}
 }
 
 
@@ -76,9 +59,23 @@
 }
 
 @media (max-width: 990px) {
+  @-webkit-keyframes mymove {
+    from {height: 100%;}
+    to {height: 40%;}
+  }
   @keyframes mymove {
     from {height: 100%;}
     to {height: 40%;}
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: -25%; 
+  }
+
+  to {
+    margin-left: 3%;
   }
 }
 
@@ -89,6 +86,16 @@
 
   to {
     margin-left: 3%;
+  }
+}
+
+@-webkit-keyframes slideinTwo {
+  from {
+    margin-left: -175%; 
+  }
+
+  to {
+    margin-left: auto;
   }
 }
 
@@ -112,6 +119,16 @@
   }
 }
 
+@-webkit-keyframes slideright {
+  from {
+    margin-right: -25%; 
+  }
+
+  to {
+    margin-right: 5%;
+  }
+}
+
 @keyframes slideright {
   from {
     margin-right: -25%; 
@@ -119,6 +136,16 @@
 
   to {
     margin-right: 5%;
+  }
+}
+
+@-webkit-keyframes sliderightTwo {
+  from {
+    margin-right: -175%; 
+  }
+
+  to {
+    margin-right: auto;
   }
 }
 
@@ -145,8 +172,8 @@ body, html {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Questrial', 'Fjalla One', 'Ubuntu','Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-animation: fadein 4s ease-out;
   animation: fadein 4s ease-out;
+  -webkit-animation: fadein 4s ease-out;
   background-image: url(../img/gradient1.jpg);
   /*background-position: top;*/
 }
@@ -255,7 +282,8 @@ section h3.section-subheading {
 }
 
 .btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
 ::-moz-selection {
@@ -266,6 +294,10 @@ section h3.section-subheading {
 ::selection {
   background: #fed136;
   text-shadow: none;
+}
+
+img::-moz-selection {
+  background: transparent;
 }
 
 img::selection {
@@ -337,7 +369,7 @@ img::-moz-selection {
     padding-bottom: 25px;
     padding-right: 32%;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -o-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
@@ -346,7 +378,7 @@ img::-moz-selection {
   #mainNav .navbar-brand {
     font-size: 1.75em;
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -390,9 +422,6 @@ header.masthead {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   width: 100%;
   height: 28%;
@@ -571,6 +600,7 @@ header.masthead .intro-text .intro-heading {
 
 #portfolio {
   /*height: 400%;*/
+  display: -ms-grid;
   display: grid;
   opacity: 0;
 }
@@ -601,7 +631,7 @@ header.masthead .intro-text .intro-heading {
   width: 100%;
   height: 100%;
   -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
   background: rgba(254, 209, 54, 0.9);
@@ -981,7 +1011,8 @@ section#contact .form-group textarea.form-control {
 
 section#contact .form-control:focus {
   border-color: #fed136;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 section#contact ::-webkit-input-placeholder {
@@ -1049,7 +1080,7 @@ ul.social-buttons li a {
   width: 40px;
   height: 40px;
   -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   color: white;
   border-radius: 100%;
@@ -1188,19 +1219,29 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   fill: blue;
 }
 
-@keyframes turn {
-  0% {transform: rotate(0deg);}
+@-webkit-keyframes turn {
+  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
   /*25% {transform: rotate(90deg);}
   50% {transform: rotate(180deg);}
   75% {transform: rotate(270deg);}*/
-  100% {transform: rotate(360deg);}
+  100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+
+@keyframes turn {
+  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  /*25% {transform: rotate(90deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(270deg);}*/
+  100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 }
 
 
 
 #texty {
   fill: black;
-  transform-origin: 272px 272px;
+  -webkit-transform-origin: 272px 272px;
+      -ms-transform-origin: 272px 272px;
+          transform-origin: 272px 272px;
 }
 
 @media (max-width: 992px) {
@@ -1230,29 +1271,35 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }*/
 #cor, #bud, #chq {
   margin-left: -45%;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 } 
 
 #sky, #hill {
   margin-right: -45%;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 
 .fade {
   opacity: 0;
-  animation: fadein 3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 
 .scrolling {
-  animation: turn 6s;
+  -webkit-animation: turn 6s;
+          animation: turn 6s;
   }
 
 @media (max-width: 990px) {
   .scrolling {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
   }
 }
 
@@ -1271,19 +1318,23 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 .slideLeft {
-  animation: slidein 1s ease-out;
+  -webkit-animation: slidein 1s ease-out;
+          animation: slidein 1s ease-out;
 }
 
 .slideRight {
-  animation: slideright 1s ease-out;
+  -webkit-animation: slideright 1s ease-out;
+          animation: slideright 1s ease-out;
 }
 
 @media (max-width: 990px) {
   .slideLeft {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
   }
   .slideRight {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
   }
   #cor, #bud, #chq {
   margin-left: 3%;
@@ -1313,11 +1364,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   }
 }
 
-@media (max-width: 390px) {
+/*@media (max-width: 390px) {
   #portfolio {
     margin-bottom: 150%;
   }
-}
+}*/
 
 
 
@@ -1328,7 +1379,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 
 #about_header {
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   text-align: center;
   font-size: 2em;
   margin: auto;
@@ -1340,7 +1392,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 @media (min-width: 767px) {
   #about_header {
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   text-align: center;
   font-size: 4em;
   margin: auto;
@@ -1396,13 +1449,13 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 @media (max-width: 990px) {
   .fade {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
   }
   #portfolio {
     opacity: 1;
   }
 }
-
 
 
 

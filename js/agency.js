@@ -1,5 +1,8 @@
 (function($) {
   "use strict"; // Start of use strict
+
+  $("#texty").addClass("scrolling");
+  // $("header.masthead").addClass("smaller_mast");
   
   $("body").scroll(function() {
 
@@ -25,9 +28,6 @@
   
   });
   
-
-  $("#texty").addClass("scrolling");
-  // $("header.masthead").addClass("smaller_mast");
 
   // Smooth scrolling using jQuery easing
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -84,10 +84,13 @@
   });
 
   $.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top;
+    var tony = $(this);
+    if(tony.offset() !== undefined){
+      var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
   };
 })(jQuery); // End of use strict
