@@ -364,9 +364,9 @@ img::-moz-selection {
   }
 }
 
-@media (max-width: 1198px) {
+/*@media (max-width: 1198px) {
   #mainNav {
-    padding-right: 35%;
+    padding-right: 25%;
   }
 }
 
@@ -380,7 +380,7 @@ img::-moz-selection {
   #mainNav {
     padding-right: 15%;
   }
-}
+}*/
 
 
 header.masthead {
@@ -405,6 +405,14 @@ header.masthead {
   header.masthead {
     -webkit-animation: none;
     animation: none;
+  }
+}
+
+@media (max-width: 415px) {
+  header.masthead {
+    -webkit-animation: none;
+    animation: none;
+    margin-bottom: 60%;
   }
 }
 
@@ -1122,10 +1130,16 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 #small_nav {
-  width: 10%;
-  float: right;
-  /*text-align: right;*/
-  margin-right: 15%;
+    width: 10%;
+    float: right;
+    margin-right: 15%;
+    /*text-align: right;*/
+}
+
+@media (min-width: 1190px) {
+  #small_nav {
+    margin-right: 5%;
+  }
 }
 
 #services {
