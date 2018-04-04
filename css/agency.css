@@ -457,26 +457,34 @@ header.masthead .intro-text .intro-lead-in {
 @media (max-width: 768px) {
   header.masthead .intro-text .intro-lead-in {
     width: 70%;
-    padding-top: 8%;
+    padding-top: 14%;
+  font-size: 2.1em;
+}
+}
+
+@media (max-width: 355px) {
+  header.masthead .intro-text .intro-lead-in {
+    width: 70%;
+    padding-top: 5%;
   font-size: 2.1em;
 }
 }
 
 @media (max-width: 749px) {
   header.masthead .intro-text .intro-lead-in {
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
 }
 }
 
 @media (max-width: 428px) {
   header.masthead .intro-text .intro-lead-in {
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
 }
 }
 
 @media (max-width: 397px) {
   header.masthead .intro-text .intro-lead-in {
-    font-size: 1em;
+    font-size: 1.7em;
     padding-top: 5%;
 }
 }
@@ -499,7 +507,7 @@ header.masthead .intro-text .intro-heading {
     text-align: left;
     /*padding: 15%;*/
     padding-left: 0;
-    margin-top: -2%;
+    /*margin-top: -2%;*/
     color: black;
     font-size: 3em;
     line-height: 1.5em;
@@ -516,14 +524,6 @@ header.masthead .intro-text .intro-heading {
     font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
-
-@media (max-width: 990px) {
-  header.masthead .intro-text .intro-lead-in {
-      -webkit-animation: none;
-      animation: none;
-    }
-  }
-
 @media (min-width: 1920px) {
   header.masthead .intro-text .intro-lead-in {
     font-size: 4em;
@@ -532,11 +532,29 @@ header.masthead .intro-text .intro-heading {
     }
   }
 
-@media (min-width: 992px) {
+@media (max-width: 990px) {
+  header.masthead .intro-text .intro-lead-in {
+      -webkit-animation: none;
+      animation: none;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 20%;
+    }
+    header.masthead {
+      margin-bottom: 70%;
+    }
+  }
+
+
+
+
+
+
+/*@media (min-width: 992px) {
   header.masthead .intro-text .intro-lead-in {
   margin-top: 10%;
   }
-}
+}*/
 .service-heading {
   margin: 15px 0;
   text-transform: none;
@@ -1184,7 +1202,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     display: none;
   }
   #top_title {
-    color: blue;
+    /*color: blue;*/
   }
 }
 
@@ -1375,6 +1393,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     opacity: 1;
   }
 }
+
 
 
 
