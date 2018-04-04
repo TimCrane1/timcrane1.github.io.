@@ -139,7 +139,7 @@
   }
 }
 
-@-webkit-keyframes sliderightTwo {
+/*@-webkit-keyframes sliderightTwo {
   from {
     margin-right: -175%; 
   }
@@ -157,10 +157,12 @@
   to {
     margin-right: auto;
   }
-}
+}*/
 
 
 body, html {
+  overflow: scroll;
+ -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0,0,0);
   position: fixed;
   top: 0; 
@@ -172,8 +174,8 @@ body, html {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Questrial', 'Fjalla One', 'Ubuntu','Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /*animation: fadein 4s ease-out;
-  -webkit-animation: fadein 4s ease-out;*/
+  animation: fadein 4s ease-out;
+  -webkit-animation: fadein 4s ease-out;
   background-image: url(../img/gradient1.jpg);
   /*background-position: top;*/
 }
@@ -426,8 +428,8 @@ header.masthead {
   width: 100%;
   height: 28%;
   margin-bottom: 40%;
-  /*animation: mymove 5s ease-out;
-  -webkit-animation: mymove 5s ease-out;*/
+  animation: mymove 5s ease-out;
+  -webkit-animation: mymove 5s ease-out;
 }
 
 @media (max-width: 990px) {
@@ -472,8 +474,8 @@ header.masthead .intro-text .intro-lead-in {
   margin-bottom: 25px;
   margin-top:15%;
   font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /*-webkit-animation: fadein 4s ease-out;
-  animation: fadein 4s ease-out;*/
+  -webkit-animation: fadein 4s ease-out;
+  animation: fadein 4s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -542,8 +544,8 @@ header.masthead .intro-text .intro-heading {
     line-height: 1.5em;
     margin-bottom: 25px;
     font-family: 'Questrial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /*-webkit-animation: fadein 5s ease-out;
-   animation: fadein 5s ease-out;*/
+    -webkit-animation: fadein 5s ease-out;
+   animation: fadein 5s ease-out;
   }
   header.masthead .intro-text .intro-heading {
     font-size: 75px;
@@ -1143,7 +1145,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }*/
 
 .project_title {
-  margin-left: 3%;
+  /*margin-left: 3%;*/
   color: black;
   padding-top: 2%;
   font-size: 2.5em;
@@ -1152,11 +1154,16 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .project_title2 {
   text-align: right;
-  margin-right: 5%;
+  /*margin-right: 5%;*/
   color: black;
   padding-top: 2%;
   font-size: 2.5em;
   font-family: 'Fjalla One';
+}
+
+.project_title:hover {
+  color: #fec503;
+  text-decoration:none;
 }
 
 .project_title2:hover {
@@ -1282,26 +1289,26 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 
-/*.fade {
+.fade {
   opacity: 0;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}*/
+}
 
 
-/*.scrolling {
+.scrolling {
   -webkit-animation: turn 6s;
           animation: turn 6s;
-  }*/
+  }
 
-/*@media (max-width: 990px) {
+@media (max-width: 990px) {
   .scrolling {
   -webkit-animation: none;
           animation: none;
   }
-}*/
+}
 
 .blocks {
   text-align: -webkit-center;
@@ -1317,7 +1324,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   animation-fill-mode: forwards;*/
 }
 
-/*.slideLeft {
+.slideLeft {
   -webkit-animation: slidein 1s ease-out;
           animation: slidein 1s ease-out;
 }
@@ -1335,12 +1342,14 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   .slideRight {
   -webkit-animation: none;
           animation: none;
-  }*/
+  }
   #cor, #bud, #chq {
-  margin-left: 3%;
+  margin-left: -45%;
+  animation-fill-mode: forwards;
   } 
   #sky, #hill {
-  margin-right: 5%;
+  margin-right: -45%;
+  animation-fill-mode: forwards;
   }
 }
 
@@ -1350,8 +1359,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .slideRight2 {
   animation: sliderightTwo 2s ease-out;
-}*/
-
+}
+*/
 #thoughts {
   text-align: center;
   font-size: 4em;
@@ -1452,10 +1461,12 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   -webkit-animation: none;
           animation: none;
   }
-  #portfolio {
+  /*#portfolio {
     opacity: 1;
-  }
+  }*/
 }
+
+
 
 
 
