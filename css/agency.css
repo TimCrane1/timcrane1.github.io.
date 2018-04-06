@@ -2,6 +2,7 @@
   --yellow: #fed136;
   --blue: #263a96;
   --black: #3a3a3a;
+  --white: #f8f8f8;
 }
 
 body.custom-modal-in {
@@ -123,50 +124,23 @@ body.custom-modal-in {
   }
 }
 
-/*@-webkit-keyframes sliderightTwo {
-  from {
-    margin-right: -175%; 
-  }
-
-  to {
-    margin-right: auto;
-  }
-}
-
-@keyframes sliderightTwo {
-  from {
-    margin-right: -175%; 
-  }
-
-  to {
-    margin-right: auto;
-  }
-}*/
-
 body,
 html {
-  /* overflow: scroll; */
-  /* -webkit-overflow-scrolling: touch;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  /*margin: 0;*/
   padding: 0;
-  /* height: 100%; */
   overflow-x: hidden;
   font-family: "Questrial", "Fjalla One", "Ubuntu", "Roboto Slab",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   animation: fadein 3s ease-out;
   -webkit-animation: fadein 3s ease-out;
-  /* background-image: url(../img/gradient1.jpg); */
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  /*background-position: top;*/
   color: var(--black);
+  background-color: var(--white);
 }
 
 @media (max-width: 990px) {
@@ -358,9 +332,9 @@ img::-moz-selection {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-@media (max-width: 498px) {
+@media (max-width: 991px) {
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
 
@@ -1157,9 +1131,14 @@ ul.social-buttons li a:hover {
 
 @media (max-width: 991px) {
   #small_nav .navbar-nav .nav-item .nav-link {
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
   }
+  #small_nav .navbar-nav .nav-item .nav-link:hover {
+    color: #f8f8f8;
+  }
+
+
 }
 
 button:focus {
