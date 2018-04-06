@@ -1207,6 +1207,7 @@ ul.social-buttons li a:hover {
   position: absolute;
   left: 0;
   top: 0;
+  width: 330px;
 }
 
 #logoy {
