@@ -79,7 +79,7 @@
     let modalOverlay = document.querySelector('.modal-overlay');
     let body = document.getElementById("page-top");
     console.log(body.classList);
-    body.classList.add('custom-modal-in')
+    body.classList.add('custom-modal-in');
     modalOverlay.classList.toggle('in');
     modal.classList.toggle('open');
 

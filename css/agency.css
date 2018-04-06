@@ -1,7 +1,6 @@
 :root {
   --yellow: #fed136;
   --blue: #263a96;
-
   --black: #3a3a3a;
 }
 
@@ -446,12 +445,6 @@ img::-moz-selection {
     -o-transition: all 0.3s;
     transition: all 0.3s;
   }
-  #mainNav .navbar-nav .nav-item .nav-link {
-    padding: 0 0 .5em 0;
-    color: var(--black);
-    margin: 1em;
-
-  }
   .nav-link::after{
     content: '';
     display: block;
@@ -459,6 +452,7 @@ img::-moz-selection {
     height: 2px;
     background: var(--blue);
     transition: width .3s;
+    z-index: 1;
   }
 
   .nav-link:hover::after {
