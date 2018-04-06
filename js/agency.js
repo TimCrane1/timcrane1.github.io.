@@ -27,26 +27,59 @@
   });
 
   // Smooth scrolling using jQuery easing
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-      if (target.length) {
-        $("html, body").animate(
-          {
-            scrollTop: target.offset().top
-          },
-          1000,
-          "easeInOutExpo"
-        );
-        return false;
+  $('a[href*="#"]:not([href="#"]:not([href*="#portfolioModal"]))').click(
+    function() {
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+        if (target.length) {
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top
+            },
+            1000,
+            "easeInOutExpo"
+          );
+          return false;
+        }
       }
     }
+  );
+
+  let modalButtons = document.querySelectorAll(".project_title");
+  let modalCloseButtons = document.querySelectorAll(".custom-modal-close");
+  modalButtons.forEach(function(modalButton){
+    modalButton.addEventListener('click', function(){
+      let modalId = this.dataset.href;
+      toggleModal(modalId);
+    });
   });
+
+  modalCloseButtons.forEach(function(modalCloseButton){
+     modalCloseButton.addEventListener("click", function() {
+       let openModals = document.querySelectorAll('.open');
+       openModals.forEach(function(openModal){
+         openModal.classList.add('out');
+         openModal.classList.remove('open');
+         setTimeout(() => {
+           openModal.classList.remove('out');
+         }, 500);
+       }) 
+       document.querySelector('.modal-overlay').classList.remove('in');
+     });
+  });
+
+  function toggleModal(id){
+    let modal = document.getElementById(id);
+    let modalOverlay = document.querySelector('.modal-overlay');
+    modalOverlay.classList.toggle('in');
+    modal.classList.toggle('open')
+
+  }
 
   $.fn.isInViewport = function() {
     var tony = $(this);
