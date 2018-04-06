@@ -51,7 +51,6 @@
 
   let modalButtons = document.querySelectorAll(".project_title");
   let modalCloseButtons = document.querySelectorAll(".custom-modal-close");
-  console.log(modalButtons, modalCloseButtons);
   modalButtons.forEach(function(modalButton){
     modalButton.addEventListener('click', function(){
       let modalId = this.dataset.href;
@@ -62,8 +61,10 @@
   modalCloseButtons.forEach(function(modalCloseButton){
      modalCloseButton.addEventListener("click", function() {
        let openModals = document.querySelectorAll('.open');
+       let body = document.getElementById("page-top");
        openModals.forEach(function(openModal){
          openModal.classList.add('out');
+         body.classList.remove('custom-modal-in');
          openModal.classList.remove('open');
          setTimeout(() => {
            openModal.classList.remove('out');
@@ -76,6 +77,9 @@
   function toggleModal(id){
     let modal = document.getElementById(id);
     let modalOverlay = document.querySelector('.modal-overlay');
+    let body = document.getElementById("page-top");
+    console.log(body.classList);
+    body.classList.add('custom-modal-in')
     modalOverlay.classList.toggle('in');
     modal.classList.toggle('open');
 
