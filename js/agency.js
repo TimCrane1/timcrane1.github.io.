@@ -5,25 +5,24 @@
   
   $("body").scroll(function() {
 
-    if($('#cor').isInViewport()){
+    if ($("#cor").isInViewport()) {
       // corner = true;
-      $('#cor').addClass('slideLeft');
-    } else if($('#sky').isInViewport()){
+      $("#cor").addClass("slideLeft");
+    } else if ($("#sky").isInViewport()) {
       // corner = true;
-      $('#sky').addClass('slideRight');
-    } else if($('#bud').isInViewport()){
+      $("#sky").addClass("slideRight");
+    } else if ($("#bud").isInViewport()) {
       // corner = true;
-      $('#bud').addClass('slideLeft');
-    } else if($('#hill').isInViewport()){
+      $("#bud").addClass("slideLeft");
+    } else if ($("#hill").isInViewport()) {
       // corner = true;
-      $('#hill').addClass('slideRight');
-    } else if($('#chq').isInViewport()){
+      $("#hill").addClass("slideRight");
+    } else if ($("#chq").isInViewport()) {
       // corner = true;
-      $('#chq').addClass('slideLeft');
-    } else if($('#portfolio').isInViewport()){
-      // corner = true;
-      $('#portfolio').addClass('fade');
-    }
+      $("#chq").addClass("slideLeft");
+    } else if ($("#portfolio").isInViewport()) {
+      $("#portfolio").addClass("fade");
+    } 
   });
 
   // Smooth scrolling using jQuery easing
