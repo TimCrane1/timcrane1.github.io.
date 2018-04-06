@@ -4,76 +4,8 @@
   --black: #3a3a3a;
 }
 
-/* Custom Modals */
 body.custom-modal-in {
    overflow: hidden;
-}
-.modal-overlay {
-  z-index: -1;
-  width: 10000px;
-  height: 10000px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, .0);
-  transition: background .25s ease-in;
-  /* transition-delay: .2s; */
-  display: none;
-}
-
-.modal-overlay.in {
-  background: rgba(0, 0, 0, .75);
-  display: block;
-  z-index: 10000;
-}
-
-.custom-modal {
-  z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  width: 100%;
-}
-
-.custom-modal:not(.out) {
-  opacity: 0;
-  transition: opacity .25s ease-out;
-  transition-delay: .1s;
-
-}
-
-.custom-modal.open {
-  z-index: 10001;
-  opacity: 1;
-}
-
-.custom-modal.out {
-  z-index: -1;
-  opacity: 0;
-}
-
-.modal-dialog {
-  width: 75%;
-  max-width: 75%;
-}
-
-.modal-body img {
-  max-width: 50%;
-}
-
-@media(max-width: 991px) {
-  .modal-dialog {
-    width: 95%;
-    max-width: 95%;
-  }
-  .modal-body img {
-    max-width: 50%;
-    float: right;
-    margin: 10px;
-
-  }
 }
 
 @keyframes fadein {
@@ -1230,12 +1162,6 @@ ul.social-buttons li a:hover {
   }
 }
 
-#small_nav .navbar-nav .nav-item .nav-link::after {
-  width:0;
-
-}
-
-
 button:focus {
   outline: none;
 }
@@ -1415,4 +1341,68 @@ button:focus {
   }
 }
 
+.modal-overlay {
+  z-index: -1;
+  width: 10000px;
+  height: 10000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, .0);
+  transition: background .25s ease-in;
+  /* transition-delay: .2s; */
+  display: none;
+}
 
+.modal-overlay.in {
+  background: rgba(0, 0, 0, .75);
+  display: block;
+  z-index: 10000;
+}
+
+.custom-modal {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  width: 100%;
+}
+
+.custom-modal:not(.out) {
+  opacity: 0;
+  transition: opacity .25s ease-out;
+  transition-delay: .1s;
+}
+
+.custom-modal.open {
+  z-index: 10001;
+  opacity: 1;
+}
+
+.custom-modal.out {
+  z-index: -1;
+  opacity: 0;
+}
+
+.modal-dialog {
+  width: 75%;
+  max-width: 75%;
+}
+
+.modal-body img {
+  max-width: 50%;
+}
+
+@media(max-width: 991px) {
+  .modal-dialog {
+    width: 95%;
+    max-width: 95%;
+  }
+  .modal-body img {
+    max-width: 50%;
+    float: right;
+    margin: 10px;
+  }
+}
