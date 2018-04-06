@@ -1,96 +1,95 @@
 (function($) {
   "use strict"; // Start of use strict
 
-  // $("#texty").addClass("scrolling");
-  // $("header.masthead").addClass("smaller_mast");
+  $("#texty").addClass("scrolling");
   
-  // $("body").scroll(function() {
+  $("body").scroll(function() {
 
-  //   if($('#cor').isInViewport()){
-  //     // corner = true;
-  //     $('#cor').addClass('slideLeft');
-  //   } else if($('#sky').isInViewport()){
-  //     // corner = true;
-  //     $('#sky').addClass('slideRight');
-  //   } else if($('#bud').isInViewport()){
-  //     // corner = true;
-  //     $('#bud').addClass('slideLeft');
-  //   } else if($('#hill').isInViewport()){
-  //     // corner = true;
-  //     $('#hill').addClass('slideRight');
-  //   } else if($('#chq').isInViewport()){
-  //     // corner = true;
-  //     $('#chq').addClass('slideLeft');
-  //   } else if($('#portfolio').isInViewport()){
-  //     // corner = true;
-  //     $('#portfolio').addClass('fade');
-  //   }
-  
-  // });
-  
+    if($('#cor').isInViewport()){
+      // corner = true;
+      $('#cor').addClass('slideLeft');
+    } else if($('#sky').isInViewport()){
+      // corner = true;
+      $('#sky').addClass('slideRight');
+    } else if($('#bud').isInViewport()){
+      // corner = true;
+      $('#bud').addClass('slideLeft');
+    } else if($('#hill').isInViewport()){
+      // corner = true;
+      $('#hill').addClass('slideRight');
+    } else if($('#chq').isInViewport()){
+      // corner = true;
+      $('#chq').addClass('slideLeft');
+    } else if($('#portfolio').isInViewport()){
+      // corner = true;
+      $('#portfolio').addClass('fade');
+    }
+  });
 
   // Smooth scrolling using jQuery easing
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-      if (target.length) {
-        $("html, body").animate(
-          {
-            scrollTop: target.offset().top - 54
-          },
-          1000,
-          "easeInOutExpo"
-        );
-        return false;
+  $('a[href*="#"]:not([href="#"]:not([href*="#portfolioModal"]))').click(
+    function() {
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+        if (target.length) {
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top
+            },
+            1000,
+            "easeInOutExpo"
+          );
+          return false;
+        }
       }
     }
+  );
+
+  let modalButtons = document.querySelectorAll(".project_title");
+  let modalCloseButtons = document.querySelectorAll(".custom-modal-close");
+  console.log(modalButtons, modalCloseButtons);
+  modalButtons.forEach(function(modalButton){
+    modalButton.addEventListener('click', function(){
+      let modalId = this.dataset.href;
+      toggleModal(modalId);
+    });
   });
 
-  // Closes responsive menu when a scroll trigger link is clicked
-  $(".js-scroll-trigger").click(function() {
-    $(".navbar-collapse").collapse("hide");
+  modalCloseButtons.forEach(function(modalCloseButton){
+     modalCloseButton.addEventListener("click", function() {
+       let openModals = document.querySelectorAll('.open');
+       openModals.forEach(function(openModal){
+         openModal.classList.add('out');
+         openModal.classList.remove('open');
+         setTimeout(() => {
+           openModal.classList.remove('out');
+         }, 500);
+       }) ;
+       document.querySelector('.modal-overlay').classList.remove('in');
+     });
   });
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  $("body").scrollspy({
-    target: "#mainNav",
-    offset: 56
-  });
+  function toggleModal(id){
+    let modal = document.getElementById(id);
+    let modalOverlay = document.querySelector('.modal-overlay');
+    modalOverlay.classList.toggle('in');
+    modal.classList.toggle('open');
 
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#page-top").offset().top > 100) {
-      $("#page-top").addClass("navbar-shrink");
-    } else {
-      $("#page-top").removeClass("navbar-shrink");
+  }
+
+  $.fn.isInViewport = function() {
+    var tony = $(this);
+    if(tony.offset() !== undefined){
+      var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
     }
   };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-//  
-  // Hide navbar when modals trigger
-  $(".portfolio-modal").on("show.bs.modal", function(e) {
-    $(".navbar").addClass("d-none");
-  });
-  $(".portfolio-modal").on("hidden.bs.modal", function(e) {
-    $(".navbar").removeClass("d-none");
-  });
-
-  // $.fn.isInViewport = function() {
-  //   var tony = $(this);
-  //   if(tony.offset() !== undefined){
-  //     var elementTop = $(this).offset().top;
-  //   var elementBottom = elementTop + $(this).outerHeight();
-  //   var viewportTop = $(window).scrollTop();
-  //   var viewportBottom = viewportTop + $(window).height();
-  //   return elementBottom > viewportTop && elementTop < viewportBottom;
-  //   }
-  // };
 })(jQuery); // End of use strict
