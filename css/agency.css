@@ -215,8 +215,8 @@ section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
-  text-shadow: 2px 2px 2px var(--blue);
-  color: var( --yellow);
+  text-shadow: 2px 2px 2px var(--yellow);
+  color: var( --blue);
 
 }
 
@@ -254,8 +254,8 @@ section h3.section-subheading {
 
 .btn-primary:active,
 .btn-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  /*-webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;*/
 }
 
 ::-moz-selection {
@@ -1085,20 +1085,12 @@ ul.social-buttons li a:hover {
 }
 
 .project_title2 {
-  text-align: right;
+  float: right;
   color: var(--yellow);
   padding-top: 25px;
   font-size: 2.5em;
   font-family: "Fjalla One";
   text-shadow: 2px 2px 2px var(--blue);
-}
-
-.project_title:hover,
-.project_title2:hover {
-      color: var(--blue);
-      text-decoration: none;
-      text-shadow: 2px 2px 2px var(--yellow);
-      cursor: pointer;
 }
 
 #title_div {
@@ -1385,3 +1377,23 @@ button:focus {
     margin: 10px;
   }
 }
+
+.building_page {
+  text-align: center;
+}
+
+/*.project_title:hover,
+.project_title2:hover {
+      color: var(--blue);
+      text-decoration: none;
+      text-shadow: 2px 2px 2px var(--yellow);
+      cursor: pointer;
+}*/
+
+.info:hover {
+  color: var(--blue);
+      text-decoration: none;
+      text-shadow: 2px 2px 2px var(--yellow);
+      cursor: pointer;  
+}
+
