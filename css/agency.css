@@ -1037,7 +1037,15 @@ ul.social-buttons li a:hover {
 /*Custom CSS*/
 
 #corner {
-  background-image: url("../img/corner.jpg");
+  background-image: url("../img/corner8.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#towers {
+  background-image: url("../img/towers.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1060,8 +1068,24 @@ ul.social-buttons li a:hover {
   background-size: cover;
 }
 
+#hays {
+  background-image: url("../img/hays.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #hilltop {
   background-image: url("../img/hilltop.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#center {
+  background-image: url("../img/center.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1195,15 +1219,18 @@ button:focus {
 }
 
 #cor,
-#bud,
-#chq {
+#sky,
+#hay,
+#cen {
   margin-left: -45%;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
-#sky,
-#hill {
+#tow,
+#bud,
+#hill,
+#chq {
   margin-right: -45%;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -1263,12 +1290,15 @@ button:focus {
     animation: none;
   }
   #cor,
-  #bud,
-  #chq {
+  #sky,
+  #hay,
+  #cen {
     margin-left: 3%;
   }
-  #sky,
-  #hill {
+  #tow,
+  #bud,
+  #hill,
+  #chq {
     margin-right: 5%;
   }
 }
@@ -1391,6 +1421,17 @@ button:focus {
 }*/
 
 .info:hover {
+  color: var(--blue);
+      text-decoration: none;
+      text-shadow: 2px 2px 2px var(--yellow);
+      cursor: pointer;  
+}
+
+.info2 {
+  text-align: right;
+}
+
+.info2:hover {
   color: var(--blue);
       text-decoration: none;
       text-shadow: 2px 2px 2px var(--yellow);
