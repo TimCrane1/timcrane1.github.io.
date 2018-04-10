@@ -1439,3 +1439,31 @@ button:focus {
       cursor: pointer;  
 }
 
+#top-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--yellow);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 4px 6px var(--black);
+  z-index: 1;
+  opacity:.75;
+  transition: opacity .2s ease;
+}
+
+#top-btn:hover {
+  opacity: 1;
+}
+#top-btn.in {
+  display: flex;
+}
+#top-btn img {
+  transform: rotate(90deg);
+  width: 60%;
+
+}
