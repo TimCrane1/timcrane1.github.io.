@@ -20,7 +20,7 @@
     } else if ($("#cen").isInViewport()) {
       $("#cen").addClass("slideLeft");
     } else if ($("#chq").isInViewport()) {
-      $("#chq").addClass("slideRight");
+      $("#chq").addClass("slideLeft");
     } else if ($("#portfolio").isInViewport()) {
       $("#portfolio").addClass("fade");
     } 

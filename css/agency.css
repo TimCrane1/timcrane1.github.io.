@@ -1221,7 +1221,8 @@ button:focus {
 #cor,
 #sky,
 #hay,
-#cen {
+#cen,
+#chq {
   margin-left: -45%;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -1229,8 +1230,7 @@ button:focus {
 
 #tow,
 #bud,
-#hill,
-#chq {
+#hill {
   margin-right: -45%;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -1292,7 +1292,8 @@ button:focus {
   #cor,
   #sky,
   #hay,
-  #cen {
+  #cen,
+  #chq {
     margin-left: 3%;
   }
   #tow,
