@@ -261,8 +261,8 @@ section h3.section-subheading {
 
 .btn-primary:active,
 .btn-primary:focus {
-  /*-webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;*/
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
 ::-moz-selection {
@@ -270,10 +270,6 @@ section h3.section-subheading {
   text-shadow: none;
 }
 
-/* ::selection {
-  background: var(--yellow);
-  text-shadow: none;
-} */
 
 img::-moz-selection {
   background: transparent;
