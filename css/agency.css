@@ -5,11 +5,9 @@
   --white: #f8f8f8;
 }
 
-html,
-body {
+* {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-
 }
 
 body.custom-modal-in {
