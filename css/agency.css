@@ -140,7 +140,8 @@ html {
   right: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "Questrial", "Fjalla One", Helvetica, Arial, sans-serif;
+  font-family: "Questrial", "Montserrat", Helvetica, Arial, sans-serif;
+
   animation: fadein 3s ease-out;
   -webkit-animation: fadein 3s ease-out;
   -webkit-animation-fill-mode: both;
@@ -163,7 +164,7 @@ hr {
 }
 
 p {
-  font-family: "Questrial", "Roboto Slab", "Helvetica Neue", Helvetica, Arial,
+  font-family: "Questrial", Helvetica, Arial,
     sans-serif;
   line-height: 1.75;
 }
@@ -178,7 +179,7 @@ a:hover {
 }
 
 i {
-  font-family: "Questrial", "Roboto Slab", "Helvetica Neue", Helvetica, Arial,
+  font-family: "Questrial", Helvetica, Arial,
     sans-serif;
   font-weight: bold;
   font-size: 1.1em;
@@ -199,7 +200,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: "Questrial", "Roboto Slab", "Helvetica Neue", Helvetica, Arial,
+  font-family: "Questrial", Helvetica, Arial,
     sans-serif;
 }
 
@@ -232,11 +233,15 @@ section h3.section-subheading {
   font-style: italic;
   margin-bottom: 75px;
   text-transform: none;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat",
+  Helvetica,
+  Arial,
+  sans-serif;
+
 }
 
 .btn {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -303,7 +308,7 @@ img::-moz-selection {
   text-transform: uppercase;
   color: var(--blue);
   border: 0;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 @media (max-width: 498px) {
@@ -314,7 +319,7 @@ img::-moz-selection {
 
 #mainNav .navbar-brand {
   color: var(--blue);
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-family: "Kaushan Script", Helvetica, Arial, cursive;
 }
 
 #mainNav .navbar-brand.active,
@@ -331,7 +336,7 @@ img::-moz-selection {
   color: var(--blue);
   margin: 1em;
   letter-spacing: 1px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -451,7 +456,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76d2df', end
   font-size: 2.5em;
   line-height: 1.5em;
   margin: 25px;
-  font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Questrial", Helvetica, Arial, sans-serif;
   -webkit-animation: fadein 3s ease-out;
   animation: fadein 3s ease-out;
 }
@@ -491,7 +496,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76d2df', end
   font-weight: 700;
   line-height: 50px;
   margin-bottom: 25px;
-  font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Questrial", Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -504,7 +509,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76d2df', end
     font-size: 3em;
     line-height: 1.5em;
     margin-bottom: 25px;
-    font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Questrial", Helvetica, Arial, sans-serif;
     -webkit-animation: fadein 5s ease-out;
     animation: fadein 3s ease-out;
   }
@@ -513,7 +518,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76d2df', end
     font-weight: 700;
     line-height: 75px;
     margin-bottom: 50px;
-    font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Questrial", Helvetica, Arial, sans-serif;
   }
 }
 @media (min-width: 1920px) {
@@ -640,7 +645,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76d2df', end
   font-size: 16px;
   font-style: italic;
   margin: 0;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat",
+  Helvetica,
+  Arial,
+  sans-serif;
+
 }
 
 #portfolio * {
@@ -679,7 +688,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76d2df', end
   font-size: 16px;
   font-style: italic;
   margin: 20px 0 30px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat",
+  "Droid Serif",
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  sans-serif;
+
 }
 
 .portfolio-modal .modal-content ul.list-inline {
@@ -1166,7 +1181,7 @@ ul.social-buttons li a:hover {
   text-shadow: 2px 2px 2px var(--blue);
 }
 
-#title_div {
+/* #title_div {
   align-self: center;
   margin-right: 35px;
   margin-left: 20px;
@@ -1174,9 +1189,9 @@ ul.social-buttons li a:hover {
 
 #top_title {
   width: 300px
-}
+} */
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   header.masthead {
     justify-content: flex-start;
     padding-left: 15px;
@@ -1204,7 +1219,7 @@ ul.social-buttons li a:hover {
   }
 
 
-}
+} */
 
 button:focus {
   outline: none;
@@ -1218,16 +1233,16 @@ button:focus {
   background-color: white;
 }
 
-#jt_logo {
+/* #jt_logo {
   position: absolute;
   left: 0;
   top: 0;
   width: 330px;
-}
+} */
 
-#logoInterior, #logoy {
+/* #logoInterior, #logoy {
   fill: var(--blue);
-}
+} */
 
 @-webkit-keyframes turn {
   0% {
@@ -1251,21 +1266,19 @@ button:focus {
   }
 }
 
-#texty {
+/* #texty {
   fill: var(--black);
   -webkit-transform-origin: 274px 269px;
   -ms-transform-origin: 274px 269px;
   transform-origin: 274px 269px;
-}
+} */
 
-@media (max-width: 992px) {
+/* @@media (max-width: 992px) {
+
   #jt_logo {
     display: none;
-  }
-  #real_dev {
-    display: none;
-  }
-}
+  } 
+} */
 
 #cor,
 #sky,
@@ -1483,7 +1496,7 @@ button:focus {
       cursor: pointer;  
 }
 
-#top-btn {
+/* #top-btn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1498,7 +1511,7 @@ button:focus {
   z-index: 1;
   opacity:.75;
   transition: opacity .2s ease;
-}
+} */
 
 #top-btn:hover {
   opacity: 1;
@@ -1506,8 +1519,8 @@ button:focus {
 #top-btn.in {
   display: flex;
 }
-#top-btn img {
+/* #top-btn img {
   transform: rotate(90deg);
   width: 60%;
 
-}
+} */
