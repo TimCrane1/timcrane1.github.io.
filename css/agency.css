@@ -1057,7 +1057,7 @@ ul.social-buttons li a:hover {
 /*Custom CSS*/
 
 #corner {
-  /* background-image: url("../img/corner8.jpg"); */
+  background-image: url("../img/corner8.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
