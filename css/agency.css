@@ -944,10 +944,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76d2df', end
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../img/gradient.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
+ background: #76d2df;
+ /* Old browsers */
+
+ background: -moz-linear-gradient(45deg, #76d2df 0%, #b4f0d6 31%, #e1e535 67%, #b67b2d 100%);
+ /* FF3.6-15 */
+
+ background: -webkit-linear-gradient(45deg, #76d2df 0%, #b4f0d6 31%, #e1e535 67%, #b67b2d 100%);
+ /* Chrome10-25,Safari5.1-6 */
+
+ background: linear-gradient(45deg, #76d2df 0%, #b4f0d6 31%, #e1e535 67%, #b67b2d 100%);
+ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76d2df', endColorstr='#b67b2d', GradientType=1);
+
+
   padding: 80px 0;
 }
 
@@ -1055,7 +1066,32 @@ ul.social-buttons li a:hover {
 }
 
 /*Custom CSS*/
+@media(max-width: 991px){
+  #towers {
+    background-image: url("../img/towers.jpg");
+  }
 
+  #skyloft {
+    background-image: url("../img/skyloft.jpg");
+  }
+
+  #buds {
+    background-image: url("../img/Buds.jpg");
+  }
+
+  #hays {
+    background-image: url("../img/hays.jpg");
+  }
+
+  #hilltop {
+    background-image: url("../img/hilltop.jpg");
+  }
+
+  #corporate_headquarters {
+    background-image: url("../img/hq.jpg");
+  }
+
+}
 #corner {
   background-image: url("../img/corner8.jpg");
   height: 100%;
@@ -1340,15 +1376,10 @@ button:focus {
     font-size: 1.5em;
   }
 }
-
 #sendMessageButton {
-      border: 2px solid var(--yellow);
-      background-color: transparent;
-      color: var(--yellow);
-}
-#sendMessageButton:hover {
   color: var(--blue);
   background-color: var(--yellow);
+  border: 2px solid var(--yellow);
   text-decoration: none;
 }
 
