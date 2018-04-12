@@ -1066,7 +1066,7 @@ ul.social-buttons li a:hover {
 }
 
 /*Custom CSS*/
-/* @media(max-width: 991px){
+@media(max-width: 991px){
   #towers {
     background-image: url("../img/towers.jpg");
   }
@@ -1085,7 +1085,7 @@ ul.social-buttons li a:hover {
   #corporate_headquarters {
     background-image: url("../img/hq.jpg");
   }
-} */
+}
 #corner {
   background-image: url("../img/corner8.jpg");
   height: 100%;

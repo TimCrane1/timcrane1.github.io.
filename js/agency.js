@@ -1,5 +1,3 @@
-"use strict";
-
 $(document).ready(function() {
   $("#texty").addClass("scrolling");
 
@@ -157,9 +155,7 @@ var defaultOptions = {
 
 function BackgroundLazyLoader() {
   var _ref2 =
-      arguments.length > 0 && arguments[0] !== undefined
-        ? arguments[0]
-        : defaultOptions,
+      arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultOptions,
     selector = _ref2.selector,
     loadedClassName = _ref2.loadedClassName;
 
