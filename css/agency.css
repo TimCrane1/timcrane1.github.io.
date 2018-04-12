@@ -140,8 +140,7 @@ html {
   right: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "Questrial", "Fjalla One", "Ubuntu", "Roboto Slab",
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Questrial", "Fjalla One", Helvetica, Arial, sans-serif;
   animation: fadein 3s ease-out;
   -webkit-animation: fadein 3s ease-out;
   -webkit-animation-fill-mode: both;
