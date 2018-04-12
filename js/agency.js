@@ -207,3 +207,15 @@ function BackgroundLazyLoader() {
 }
 
 BackgroundLazyLoader();
+
+
+var fontsUsed = [
+  "Questrial",
+  "Fjalla One", 
+  "Roboto Slab", 
+  "Helvetica Neue", 
+  "Helvetica", 
+  "Arial", 
+  "sans-serif", 
+  "Montserrat", 
+  ]
