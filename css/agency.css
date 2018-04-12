@@ -1057,7 +1057,7 @@ ul.social-buttons li a:hover {
 /*Custom CSS*/
 
 #corner {
-  background-image: url("../img/corner8.jpg");
+  /* background-image: url("../img/corner8.jpg"); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1065,7 +1065,7 @@ ul.social-buttons li a:hover {
 }
 
 #towers {
-  background-image: url("../img/towers.jpg");
+  /* background-image: url("../img/towers.jpg"); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1073,7 +1073,7 @@ ul.social-buttons li a:hover {
 }
 
 #skyloft {
-  background-image: url("../img/skyloft.jpg");
+  /* background-image: url("../img/skyloft.jpg"); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1081,7 +1081,7 @@ ul.social-buttons li a:hover {
 }
 
 #buds {
-  background-image: url("../img/Buds.jpg");
+  /* background-image: url("../img/Buds.jpg"); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1089,7 +1089,7 @@ ul.social-buttons li a:hover {
 }
 
 #hays {
-  background-image: url("../img/hays.jpg");
+  /* background-image: url("../img/hays.jpg"); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1097,23 +1097,23 @@ ul.social-buttons li a:hover {
 }
 
 #hilltop {
-  background-image: url("../img/hilltop.jpg");
+  /* background-image: url("../img/hilltop.jpg"); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#center {
+/* #center {
   background-image: url("../img/center.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 #corporate_headquarters {
-  background-image: url("../img/hq.jpg");
+  /* background-image: url("../img/hq.jpg"); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

@@ -1,10 +1,8 @@
-$(document).ready(function(){
- 
+$(document).ready(function() {
   $("#texty").addClass("scrolling");
-  
+
   var topBtn = false;
   $("body").scroll(function() {
-
     if ($("#cor").isInViewport()) {
       $("#cor").addClass("slideLeft");
     } else if ($("#tow").isInViewport()) {
@@ -23,25 +21,24 @@ $(document).ready(function(){
       $("#chq").addClass("slideLeft");
     } else if ($("#portfolio").isInViewport()) {
       $("#portfolio").addClass("fade");
-    } 
+    }
     if (document.body.scrollTop < 250) {
       if (document.getElementById("top-btn").classList.contains("in")) {
         document.getElementById("top-btn").classList.remove("in");
       }
     }
     if (document.body.scrollTop >= 250) {
-        if (!document.getElementById("top-btn").classList.contains("in")) {
-          document.getElementById("top-btn").classList.add("in");
-        }
+      if (!document.getElementById("top-btn").classList.contains("in")) {
+        document.getElementById("top-btn").classList.add("in");
       }
+    }
   });
-  
-//   window.addEventListener('resize', function(){
-//     if(window.innerWidth > 568){
-       
-//     }
-// });
 
+  //   window.addEventListener('resize', function(){
+  //     if(window.innerWidth > 568){
+
+  //     }
+  // });
 
   // Smooth scrolling using jQuery easing
   // $('a[href*="#"]:not([href="#"]:not([href*="#portfolioModal"]))').click(
@@ -78,19 +75,26 @@ $(document).ready(function(){
   // (window.onscroll = function() {
   //   scrollFunction();
   // })
-  
-  $(document).scrollTop() > 250 && (document.getElementById("top-btn").style.display = "flex"), $("#top-btn").on(
-      "click",
-      function() {
-        $(".top-link").trigger("click");
-      }
-    ), $('a[href*="#"]')
+
+  $(document).scrollTop() > 250 &&
+    (document.getElementById("top-btn").style.display = "flex"),
+    $("#top-btn").on("click", function() {
+      $(".top-link").trigger("click");
+    }),
+    $('a[href*="#"]')
       .not('[href="#"]')
       .not('[href="#0"]')
       .click(function(e) {
-        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+        if (
+          location.pathname.replace(/^\//, "") ==
+            this.pathname.replace(/^\//, "") &&
+          location.hostname == this.hostname
+        ) {
           var t = $(this.hash);
-          (t = t.length ? t : $("[name=" + this.hash.slice(1) + "]")), t.length && (e.preventDefault(), $("html, body").animate(
+          (t = t.length ? t : $("[name=" + this.hash.slice(1) + "]")),
+            t.length &&
+              (e.preventDefault(),
+              $("html, body").animate(
                 {
                   scrollTop: t.offset().top
                 },
@@ -107,15 +111,77 @@ $(document).ready(function(){
         }
       });
 
-
   $.fn.isInViewport = function() {
     var tony = $(this);
-    if(tony.offset() !== undefined){
+    if (tony.offset() !== undefined) {
       var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
+      var elementBottom = elementTop + $(this).outerHeight();
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+      return elementBottom > viewportTop && elementTop < viewportBottom;
     }
   };
 }); // End of use strict
+
+function BackgroundNode({ node, loadedClassName }) {
+  let src = node.getAttribute("data-background-image-url");
+  let show = onComplete => {
+    requestAnimationFrame(() => {
+      node.style.backgroundImage = `url(${src})`;
+      node.classList.add(loadedClassName);
+      onComplete();
+    });
+  };
+
+  return {
+    node,
+
+    // onComplete is called after the image is done loading.
+    load: onComplete => {
+      let img = new Image();
+      img.onload = show(onComplete);
+      img.src = src;
+    }
+  };
+}
+
+let defaultOptions = {
+  selector: "[data-background-image-url]",
+  loadedClassName: "loaded"
+};
+
+function BackgroundLazyLoader({ selector, loadedClassName } = defaultOptions) {
+  let nodes = [].slice
+    .apply(document.querySelectorAll(selector))
+    .map(node => new BackgroundNode({ node, loadedClassName }));
+
+  let callback = (entries, observer) => {
+    entries.forEach(({ target, isIntersecting }) => {
+      if (!isIntersecting) {
+        return;
+      }
+
+      let obj = nodes.find(it => it.node.isSameNode(target));
+
+      if (obj) {
+        obj.load(() => {
+          // Unobserve the node:
+          observer.unobserve(target);
+          // Remove this node from our list:
+          nodes = nodes.filter(n => !n.node.isSameNode(target));
+
+          // If there are no remaining unloaded nodes,
+          // disconnect the observer since we don't need it anymore.
+          if (!nodes.length) {
+            observer.disconnect();
+          }
+        });
+      }
+    });
+  };
+
+  let observer = new IntersectionObserver(callback);
+  nodes.forEach(node => observer.observe(node.node));
+}
+
+BackgroundLazyLoader();
