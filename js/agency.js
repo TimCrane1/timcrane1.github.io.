@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function() {
   $("#texty").addClass("scrolling");
 
@@ -123,52 +125,74 @@ $(document).ready(function() {
   };
 }); // End of use strict
 
-function BackgroundNode({ node, loadedClassName }) {
-  let src = node.getAttribute("data-background-image-url");
-  let show = onComplete => {
-    requestAnimationFrame(() => {
-      node.style.backgroundImage = `url(${src})`;
+function BackgroundNode(_ref) {
+  var node = _ref.node,
+    loadedClassName = _ref.loadedClassName;
+
+  var src = node.getAttribute("data-background-image-url");
+  var show = function show(onComplete) {
+    requestAnimationFrame(function() {
+      node.style.backgroundImage = "url(" + src + ")";
       node.classList.add(loadedClassName);
       onComplete();
     });
   };
 
   return {
-    node,
+    node: node,
 
     // onComplete is called after the image is done loading.
-    load: onComplete => {
-      let img = new Image();
+    load: function load(onComplete) {
+      var img = new Image();
       img.onload = show(onComplete);
       img.src = src;
     }
   };
 }
 
-let defaultOptions = {
+var defaultOptions = {
   selector: "[data-background-image-url]",
   loadedClassName: "loaded"
 };
 
-function BackgroundLazyLoader({ selector, loadedClassName } = defaultOptions) {
-  let nodes = [].slice
-    .apply(document.querySelectorAll(selector))
-    .map(node => new BackgroundNode({ node, loadedClassName }));
+function BackgroundLazyLoader() {
+  var _ref2 =
+      arguments.length > 0 && arguments[0] !== undefined
+        ? arguments[0]
+        : defaultOptions,
+    selector = _ref2.selector,
+    loadedClassName = _ref2.loadedClassName;
 
-  let callback = (entries, observer) => {
-    entries.forEach(({ target, isIntersecting }) => {
+  var nodes = [].slice
+    .apply(document.querySelectorAll(selector))
+    .map(function(node) {
+      return new BackgroundNode({
+        node: node,
+        loadedClassName: loadedClassName
+      });
+    });
+
+  var callback = function callback(entries, observer) {
+    entries.forEach(function(_ref3) {
+      var target = _ref3.target,
+        isIntersecting = _ref3.isIntersecting;
+
       if (!isIntersecting) {
         return;
       }
 
-      let obj = nodes.find(it => it.node.isSameNode(target));
+      var obj = nodes.find(function(it) {
+        return it.node.isSameNode(target);
+      });
 
       if (obj) {
-        obj.load(() => {
+        obj.load(function() {
           // Unobserve the node:
           observer.unobserve(target);
           // Remove this node from our list:
-          nodes = nodes.filter(n => !n.node.isSameNode(target));
+          nodes = nodes.filter(function(n) {
+            return !n.node.isSameNode(target);
+          });
 
           // If there are no remaining unloaded nodes,
           // disconnect the observer since we don't need it anymore.
@@ -180,8 +204,10 @@ function BackgroundLazyLoader({ selector, loadedClassName } = defaultOptions) {
     });
   };
 
-  let observer = new IntersectionObserver(callback);
-  nodes.forEach(node => observer.observe(node.node));
+  var observer = new IntersectionObserver(callback);
+  nodes.forEach(function(node) {
+    return observer.observe(node.node);
+  });
 }
 
 BackgroundLazyLoader();

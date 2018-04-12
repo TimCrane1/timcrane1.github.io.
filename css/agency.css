@@ -1066,32 +1066,26 @@ ul.social-buttons li a:hover {
 }
 
 /*Custom CSS*/
-@media(max-width: 991px){
+/* @media(max-width: 991px){
   #towers {
     background-image: url("../img/towers.jpg");
   }
-
   #skyloft {
     background-image: url("../img/skyloft.jpg");
   }
-
   #buds {
     background-image: url("../img/Buds.jpg");
   }
-
   #hays {
     background-image: url("../img/hays.jpg");
   }
-
   #hilltop {
     background-image: url("../img/hilltop.jpg");
   }
-
   #corporate_headquarters {
     background-image: url("../img/hq.jpg");
   }
-
-}
+} */
 #corner {
   background-image: url("../img/corner8.jpg");
   height: 100%;
