@@ -200,22 +200,13 @@ function BackgroundLazyLoader() {
     });
   };
 
-  var observer = new IntersectionObserver(callback);
+  var observer = new IntersectionObserver(callback, {
+    rootMargin: "200px",
+    threshold: 0
+  });
   nodes.forEach(function(node) {
     return observer.observe(node.node);
   });
 }
 
 BackgroundLazyLoader();
-
-
-var fontsUsed = [
-  "Questrial",
-  "Fjalla One", 
-  "Roboto Slab", 
-  "Helvetica Neue", 
-  "Helvetica", 
-  "Arial", 
-  "sans-serif", 
-  "Montserrat", 
-  ]
